@@ -49,12 +49,13 @@ function paint(){
                 || yPos + bird.height >= pipe[i].y + pipeUp.height + gap)
                 || yPos + bird.height >= first.height - fg.height){
 
-                
-                    location.reload();
+                return alert(`${score} - your score`) && location.reload();
+                    
                 }
         if(pipe[i].x == 5){
             score++;
-        }        
+        }
+                
     }
     
     loc.drawImage(fg, 0, first.height - fg.height);
